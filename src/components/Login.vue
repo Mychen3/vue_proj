@@ -78,6 +78,10 @@
         const result = await this.$axios.post('login', this.loginForm)
 //   判断登入状态状态码
         if (result.data.meta.status === 200) {
+//      保存token到sessionstorage中
+          window.sessionStorage.setItem('token', result.data.data.token)
+//       通过编程式导航跳转到后台主页 路由地址 /home
+          await this.$router.push('/home')
           return this.$message.success('登入成功')
         } else {
           this.$message.error('登入失败')
@@ -87,7 +91,7 @@
   }
 }
 </script>
-<style scoped lang="scss" type="text/scss">
+<style scoped lang="less">
   .login_container {
     background-color: #2b4b6b;
     height: 100%;
