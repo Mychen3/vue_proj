@@ -6,3 +6,25 @@
      margin: 0;
      padding: 0;
  }
+ .el-breadcrumb{
+     margin-bottom: 16px;
+     font-size: 12px;
+ }
+ .el-card{
+     /*边框圆角*/
+     border-radius:8px;
+     /*定义元素阴影  important忽略权重*/
+     box-shadow: 0 1px 1px rgba(0,0,0,0.15)!important; ;
+ }
+ .el-table{
+     margin-top: 15px;
+ }
+ body .el-table th.gutter {
+     /*表格边框对齐*/
+     display: table-cell !important
+ }
+ .el-pagination{
+     margin-top: 20px;
+     display: flex;
+     justify-content: center;
+ }
